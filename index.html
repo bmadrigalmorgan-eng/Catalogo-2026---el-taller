@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="El Taller — Impresiones en playeras, tazas, gorras, termos y vasos. Huixtla, Chiapas.">
-<meta property="og:title" content="El Taller — Catálogo 2026">
+<meta property="og:title" content="El Taller — Catálogo">
 <meta property="og:description" content="Impresiones DTF y Sublimación en Huixtla. Playeras, tazas, gorras, termos y más.">
 <title>El Taller — Catálogo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -257,11 +257,239 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
 <!-- HERO -->
 <section class="hero">
   <img class="hero-logo" src="logo.jpg" alt="El Taller">
-  <div class="hero-tag">Catálogo 2026</div>
+  <div class="hero-tag">Catálogo</div>
   <h1 class="hero-title">Impresiones<br><span>que duran</span></h1>
   <p class="hero-sub">Personalización en playeras, tazas, gorras, termos, vasos con técnica DTF textil, DTF UV, sublimación, vinil permanente.</p>
   <p class="hero-city" style="text-transform:none;letter-spacing:0.04em;">Huixtla, Chiapas · @eltaller.hx</p>
 </section>
+
+<!-- ██ BANNER VIERNES ESPECIAL ██ -->
+<style>
+/* ── WRAP: mismo fondo que las secciones de producto ── */
+.viernes-wrap{
+  background:var(--white);
+  padding:36px 20px;
+}
+/* ── CAJA: misma estructura que prod-card ── */
+.viernes-card{
+  background:var(--white);
+  border-radius:20px;
+  border:1.5px solid var(--border);
+  overflow:hidden;
+  max-width:480px;
+  margin:0 auto;
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
+}
+/* ── CABECERA NEGRA con acento dorado ── */
+.vb-head{
+  background:var(--ink);
+  padding:22px 20px 20px;
+  border-bottom:3px solid var(--acc);
+}
+.vb-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(40px,11vw,56px);
+  color:#fff;
+  line-height:0.92;
+  letter-spacing:0.02em;
+  margin:0;
+}
+.vb-title em{color:var(--acc);font-style:normal;}
+/* ── CUERPO ── */
+.vb-body{
+  padding:18px 20px 22px;
+  background:var(--white);
+}
+/* chip producto — bien visible */
+.vb-chip{
+  display:flex;align-items:flex-start;gap:8px;
+  background:#FFF8E0;
+  border:1.5px solid #E8C800;
+  border-radius:10px;
+  padding:10px 14px;
+  margin-bottom:20px;
+  font-size:12px;font-weight:700;color:var(--ink);
+  line-height:1.5;
+}
+.vb-chip-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+/* encabezados de tabla */
+.vb-table{width:100%;border-collapse:collapse;}
+.vb-table thead tr{border-bottom:2px solid var(--border);}
+.vb-table th{
+  font-size:9px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--ink2);padding:0 0 9px;text-align:left;
+}
+.vb-table th:nth-child(2){text-align:center;}
+.vb-table th:last-child{text-align:right;}
+/* filas normales */
+.vb-table tbody tr{border-bottom:1px solid var(--border);}
+.vb-table tbody tr:last-child{border-bottom:none;}
+.vb-table td{padding:11px 0;vertical-align:middle;}
+.vb-table td:nth-child(2){text-align:center;}
+.vb-table td:last-child{text-align:right;}
+/* cantidad */
+.vb-qty{font-size:13px;font-weight:700;color:var(--ink);display:block;}
+.vb-tipo{font-size:10px;color:var(--ink3);display:block;margin-top:2px;}
+/* precio tachado — gris claro, legible */
+.vb-normal{
+  font-family:'Poppins',sans-serif;
+  font-size:13px;font-weight:600;
+  color:#C0B8AE;
+  text-decoration:line-through;
+  display:block;
+  line-height:1;
+}
+/* precio promo — Poppins bold, magenta, igual que price-val de productos */
+.vb-promo{
+  font-family:'Poppins',sans-serif;
+  font-size:22px;font-weight:700;
+  color:var(--mag);
+  display:block;
+  line-height:1.1;
+  margin-top:1px;
+}
+/* fila separador de grupo (Adulto / Niño) */
+.vb-divrow td{
+  padding:12px 0 5px;
+  font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink2);
+  border-bottom:none !important;
+  background:transparent;
+}
+/* nota 30 piezas */
+.vb-nota30{
+  margin-top:18px;
+  background:var(--bg);
+  border-radius:10px;
+  border:1px solid var(--border);
+  padding:11px 14px;
+  font-size:12px;color:var(--ink2);
+  line-height:1.6;
+  display:flex;align-items:flex-start;gap:8px;
+}
+.vb-nota30 strong{color:var(--ink);}
+.vb-nota30-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+/* condiciones pie */
+.vb-cond{
+  margin-top:14px;
+  font-size:11px;color:var(--ink3);
+  line-height:1.8;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+}
+.vb-cond strong{color:var(--ink2);}
+/* ── BOTÓN WhatsApp promo ── */
+.vb-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:#25D366;
+  color:#fff;
+  border-radius:100px;
+  padding:16px 24px;
+  font-family:'Poppins',sans-serif;
+  font-size:14px;font-weight:700;
+  text-decoration:none;
+  margin-top:18px;
+  box-shadow:0 6px 20px rgba(37,211,102,0.35);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.vb-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,0.45);}
+.vb-btn svg{width:22px;height:22px;flex-shrink:0;}
+</style>
+
+<div class="viernes-wrap">
+  <div class="viernes-card">
+
+    <!-- CABECERA -->
+    <div class="vb-head">
+      <h2 class="vb-title">Viernes <em>Especial</em></h2>
+    </div>
+
+    <!-- CUERPO -->
+    <div class="vb-body">
+
+      <!-- chip: qué aplica -->
+      <div class="vb-chip">
+        <span class="vb-chip-icon">👕</span>
+        <span>Playera básica cuello redondo · diseño de <strong>un solo lado</strong> · cualquier color</span>
+      </div>
+
+      <!-- tabla precios -->
+      <table class="vb-table">
+        <thead>
+          <tr>
+            <th>Cantidad</th>
+            <th>Precio normal</th>
+            <th>Precio hoy</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- ─ ADULTO ─ -->
+          <tr class="vb-divrow"><td colspan="3">Adulto</td></tr>
+          <tr>
+            <td>
+              <span class="vb-qty">Menudeo</span>
+              <span class="vb-tipo">1 – 11 piezas</span>
+            </td>
+            <td><span class="vb-normal">$220</span></td>
+            <td><span class="vb-promo">$200</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span class="vb-qty">Desde 12 pzas</span>
+            </td>
+            <td><span class="vb-normal">$205</span></td>
+            <td><span class="vb-promo">$185</span></td>
+          </tr>
+
+          <!-- ─ NIÑO ─ -->
+          <tr class="vb-divrow"><td colspan="3">Niño</td></tr>
+          <tr>
+            <td>
+              <span class="vb-qty">Menudeo</span>
+              <span class="vb-tipo">1 – 11 piezas</span>
+            </td>
+            <td><span class="vb-normal">$215</span></td>
+            <td><span class="vb-promo">$195</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span class="vb-qty">Desde 12 pzas</span>
+            </td>
+            <td><span class="vb-normal">$200</span></td>
+            <td><span class="vb-promo">$180</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!-- nota 30+ -->
+      <div class="vb-nota30">
+        <span class="vb-nota30-icon">📦</span>
+        <span><strong>¿30 piezas o más?</strong> Escríbenos para cotizar por separado, tenemos precio especial por volumen.</span>
+      </div>
+
+      <!-- botón WhatsApp -->
+      <a class="vb-btn"
+         href="https://wa.me/529624545184?text=Hola%20El%20Taller%2C%20quiero%20aprovechar%20el%20precio%20especial%20de%20viernes%20en%20playeras%20%F0%9F%91%95"
+         target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.533 5.862L0 24l6.294-1.503A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.5-5.2-1.376l-.374-.214-3.862.922.976-3.765-.238-.387A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Pedir precio especial de viernes
+      </a>
+
+      <!-- condiciones -->
+      <p class="vb-cond">
+        <strong>Pedidos el viernes antes de las 5 pm.</strong>
+        Entrega martes o miércoles. Solo aplica a playera básica cuello redondo con diseño de un solo lado.
+      </p>
+
+    </div><!-- /vb-body -->
+  </div><!-- /viernes-card -->
+</div><!-- /viernes-wrap -->
+
 
 <!-- DTF SECTION -->
 <section class="section" style="background:var(--white);">
@@ -283,11 +511,13 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Playera básica</div>
         <div class="prod-spec">100% algodón · Cuello redondo · CH a XG</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">1 lado</span><span class="price-val">$185</span></div>
-          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 1 lado</span><span class="price-val price-mayo">$160</span></div>
+          <div class="price-row"><span class="price-label">1 lado</span><span class="price-val">$220</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas · 1 lado</span><span class="price-val price-mayo">$205</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas · 1 lado</span><span class="price-val price-mayo">$190</span></div>
           <hr class="price-divider">
-          <div class="price-row"><span class="price-label">2 lados</span><span class="price-val">$225</span></div>
-          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 2 lados</span><span class="price-val price-mayo">$200</span></div>
+          <div class="price-row"><span class="price-label">2 lados</span><span class="price-val">$260</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas · 2 lados</span><span class="price-val price-mayo">$245</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas · 2 lados</span><span class="price-val price-mayo">$230</span></div>
         </div>
         <div class="tallas-row" style="margin-top:8px;"><span class="talla">CH</span><span class="talla">M</span><span class="talla">G</span><span class="talla">XG</span></div>
       </div>
@@ -298,11 +528,11 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Polo premium</div>
         <div class="prod-spec">Cuello polo · CH a XG</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">1 lado</span><span class="price-val">$—</span></div>
-          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 1 lado</span><span class="price-val price-mayo">$—</span></div>
+          <div class="price-row"><span class="price-label">1 lado</span><span class="price-val">$255</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 1 lado</span><span class="price-val price-mayo">$240</span></div>
           <hr class="price-divider">
-          <div class="price-row"><span class="price-label">2 lados</span><span class="price-val">$—</span></div>
-          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 2 lados</span><span class="price-val price-mayo">$—</span></div>
+          <div class="price-row"><span class="price-label">2 lados</span><span class="price-val">$290</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 2 lados</span><span class="price-val price-mayo">$275</span></div>
         </div>
         <div class="tallas-row" style="margin-top:8px;"><span class="talla">CH</span><span class="talla">M</span><span class="talla">G</span><span class="talla">XG</span></div>
         <p style="font-size:10px;color:var(--ink3);margin-top:6px;">* Precios próximamente</p>
@@ -314,14 +544,15 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Playera infantil</div>
         <div class="prod-spec">100% algodón · CH, M, G</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">1 lado</span><span class="price-val">$—</span></div>
-          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 1 lado</span><span class="price-val price-mayo">$—</span></div>
+          <div class="price-row"><span class="price-label">1 lado</span><span class="price-val">$215</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas · 1 lado</span><span class="price-val price-mayo">$200</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas · 1 lado</span><span class="price-val price-mayo">$185</span></div>
           <hr class="price-divider">
-          <div class="price-row"><span class="price-label">2 lados</span><span class="price-val">$—</span></div>
-          <div class="price-row" style="margin-top:2px;"><span class="price-label">Mayoreo 2 lados</span><span class="price-val price-mayo">$—</span></div>
+          <div class="price-row"><span class="price-label">2 lados</span><span class="price-val">$255</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas · 2 lados</span><span class="price-val price-mayo">$240</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas · 2 lados</span><span class="price-val price-mayo">$225</span></div>
         </div>
         <div class="tallas-row" style="margin-top:8px;"><span class="talla">CH</span><span class="talla">M</span><span class="talla">G</span></div>
-        <p style="font-size:10px;color:var(--ink3);margin-top:6px;">* Precios próximamente</p>
       </div>
     </div>
   </div>
@@ -371,9 +602,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Taza blanca</div>
         <div class="prod-spec">11oz · Cerámica sublimable</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$45</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$39</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$80</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$65</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$55</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#1a1a1a;" title="Negro"></div><div class="pc" style="background:#fff;border-color:#ccc;" title="Blanco"></div><div class="pc" style="background:#DC2626;" title="Rojo"></div><div class="pc" style="background:#2563EB;" title="Azul"></div><div class="pc" style="background:#15803D;" title="Verde"></div><div class="pc" style="background:#F59E0B;" title="Amarillo"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -384,9 +615,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Taza espejo</div>
         <div class="prod-spec">11oz · Cerámica brillante</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$150</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$135</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$180</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$145</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$130</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#D4AF37;" title="Dorado"></div><div class="pc" style="background:#C0C0C0;" title="Plateado"></div><div class="pc" style="background:#1a1a1a;" title="Negro"></div><div class="pc" style="background:#DC2626;" title="Rojo"></div><div class="pc" style="background:#2563EB;" title="Azul"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -397,9 +628,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Taza glaseada</div>
         <div class="prod-spec">11oz · Vidrio esmerilado</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$53</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$46</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$85</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$70</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$60</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#EC4899;" title="Rosa"></div><div class="pc" style="background:#8B5CF6;" title="Morado"></div><div class="pc" style="background:#2563EB;" title="Azul"></div><div class="pc" style="background:#15803D;" title="Verde"></div><div class="pc" style="background:#1a1a1a;" title="Negro"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -410,9 +641,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Taza mágica</div>
         <div class="prod-spec">11oz · Cambia de color</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$69</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$59</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$120</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$90</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$80</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#1a1a1a;" title="Negro matte"></div><div class="pc" style="background:#2d2d2d;" title="Negro brillante"></div></div><p class="pc-label">Matte y brillante</p>
       </div>
@@ -423,9 +654,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Taza doble color</div>
         <div class="prod-spec">11oz · Interior de color</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$51</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$45</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$95</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$75</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$65</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#DC2626;" title="Rojo"></div><div class="pc" style="background:#2563EB;" title="Azul"></div><div class="pc" style="background:#15803D;" title="Verde"></div><div class="pc" style="background:#F59E0B;" title="Amarillo"></div><div class="pc" style="background:#1a1a1a;" title="Negro"></div><div class="pc" style="background:#EC4899;" title="Rosa"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -453,9 +684,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Jarra viajera</div>
         <div class="prod-spec">470ml · Acero y plástico</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$198</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$178</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$240</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$200</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$185</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#9CA3AF;"></div><div class="pc" style="background:#fff;border-color:#ccc;"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -466,9 +697,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Tarro cervecero</div>
         <div class="prod-spec">16oz · Cristal glaseado</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$155</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$130</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$185</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$145</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$130</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:rgba(200,230,255,0.7);border-color:#aaa;"></div><div class="pc" style="background:rgba(180,220,180,0.6);border-color:#aaa;"></div></div><p class="pc-label">Cristal glaseado y transparente</p>
       </div>
@@ -479,9 +710,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Cilindro aluminio</div>
         <div class="prod-spec">600ml · Aluminio</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$135</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$110</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$160</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$125</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$110</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#9CA3AF;"></div><div class="pc" style="background:#fff;border-color:#ccc;"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -510,9 +741,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Cilindro Lake</div>
         <div class="prod-spec">850ml · Plástico rígido</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$150</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$135</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$115</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$85</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$75</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#1a1a1a;"></div><div class="pc" style="background:#DC2626;"></div><div class="pc" style="background:#2563EB;"></div><div class="pc" style="background:#15803D;"></div><div class="pc" style="background:#F59E0B;"></div><div class="pc" style="background:#EC4899;"></div><div class="pc" style="background:#8B5CF6;"></div><div class="pc" style="background:#38BDF8;"></div><div class="pc" style="background:#EA580C;"></div><div class="pc" style="background:#fff;border-color:#ccc;"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -523,9 +754,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Vaso chupón</div>
         <div class="prod-spec">500ml · Plástico rígido</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$45</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$35</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$70</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$55</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$45</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#1a1a1a;"></div><div class="pc" style="background:#DC2626;"></div><div class="pc" style="background:#2563EB;"></div><div class="pc" style="background:#15803D;"></div><div class="pc" style="background:#F59E0B;"></div><div class="pc" style="background:#EC4899;"></div><div class="pc" style="background:#8B5CF6;"></div><div class="pc" style="background:#38BDF8;"></div><div class="pc" style="background:#EA580C;"></div><div class="pc" style="background:#fff;border-color:#ccc;"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
@@ -536,9 +767,9 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
         <div class="prod-name">Vaso cafetalero</div>
         <div class="prod-spec">16oz · Plástico rígido</div>
         <div class="prod-prices">
-          <div class="price-row"><span class="price-label">Unitario</span><span class="price-val">$75</span></div>
-          <hr class="price-divider">
-          <div class="price-row"><span class="price-label">Mayoreo</span><span class="price-val price-mayo">$60</span></div>
+          <div class="price-row"><span class="price-label">1 pieza</span><span class="price-val">$90</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">12 pzas</span><span class="price-val price-mayo">$75</span></div>
+          <div class="price-row" style="margin-top:2px;"><span class="price-label">30 pzas</span><span class="price-val price-mayo">$60</span></div>
         </div>
         <div class="prod-colors"><div class="pc" style="background:#1a1a1a;"></div><div class="pc" style="background:#DC2626;"></div><div class="pc" style="background:#2563EB;"></div><div class="pc" style="background:#15803D;"></div><div class="pc" style="background:#F59E0B;"></div><div class="pc" style="background:#EC4899;"></div><div class="pc" style="background:#8B5CF6;"></div></div><p class="pc-label">Colores sujetos a disponibilidad</p>
       </div>
