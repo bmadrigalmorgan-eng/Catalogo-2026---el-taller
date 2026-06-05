@@ -1095,6 +1095,7 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);over
       <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--acc);margin-bottom:10px;">Horario de atención</div>
       <div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;">
         Lunes a Viernes · 10:00 am – 5:00 pm<br>
+        <span style="font-size:12px;color:rgba(255,255,255,0.65);">Calle Allende Oriente entre Av. Juárez y González Ortega</span><br>
         <span style="font-size:12px;color:rgba(255,255,255,0.45);">Huixtla, Chiapas</span>
       </div>
     </div>
@@ -1149,11 +1150,9 @@ document.querySelectorAll('.fade-in').forEach(el => {
 
 <script>
 // ── PRODUCT CATALOG ──
-const PRODUCTS = {"Playera básica": {"basePrice": 220, "priceNote": "1 lado desde $220 · 2 lados desde $260 · Mayoreo desde 12 pzas", "fields": [{"label": "Lados de impresión", "type": "select", "options": ["1 lado", "2 lados"]}, {"label": "Cantidad", "type": "number", "options": []}, {"label": "Color de playera", "type": "select", "options": ["Negro", "Blanco", "Azul", "Celeste", "Gris", "Verde limón", "Verde bandera", "Amarillo", "Rojo", "Naranja", "Rosa", "Rosa pastel", "Café", "Vino"]}, {"label": "Talla", "type": "select", "options": ["CH", "M", "G", "XG", "XXG"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Polo premium": {"basePrice": 255, "priceNote": "1 lado desde $255 · 2 lados desde $290", "fields": [{"label": "Lados de impresión", "type": "select", "options": ["1 lado", "2 lados"]}, {"label": "Cantidad", "type": "number", "options": []}, {"label": "Color de playera", "type": "select", "options": ["Negro", "Blanco", "Azul", "Celeste", "Gris", "Verde limón", "Verde bandera", "Amarillo", "Rojo", "Naranja", "Rosa", "Rosa pastel", "Café", "Vino"]}, {"label": "Talla", "type": "select", "options": ["CH", "M", "G", "XG"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Playera infantil": {"basePrice": 215, "priceNote": "1 lado desde $215 · 2 lados desde $255 · Mayoreo desde 12 pzas", "fields": [{"label": "Lados de impresión", "type": "select", "options": ["1 lado", "2 lados"]}, {"label": "Cantidad", "type": "number", "options": []}, {"label": "Color de playera", "type": "select", "options": ["Negro", "Blanco", "Azul", "Celeste", "Gris", "Verde limón", "Verde bandera", "Amarillo", "Rojo", "Naranja", "Rosa", "Rosa pastel", "Café", "Vino"]}, {"label": "Talla", "type": "select", "options": ["2 (CH)", "4 (CH)", "6 (M)", "8 (M)", "10 (G)", "12 (G)", "14 (XG)"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza blanca": {"basePrice": 90, "priceNote": "1 pza $90 · 12 pzas $75 c/u · 30 pzas $65 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza espejo": {"basePrice": 190, "priceNote": "1 pza $190 · 12 pzas $155 c/u · 30 pzas $140 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Rosa", "Oro", "Plata"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza glaseada": {"basePrice": 95, "priceNote": "1 pza $95 · 12 pzas $80 c/u · 30 pzas $70 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Azul", "Esmeralda", "Rosa", "Negro"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza mágica": {"basePrice": 130, "priceNote": "1 pza $130 · 12 pzas $100 c/u · 30 pzas $90 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro matte", "Negro brillante"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza doble color": {"basePrice": 95, "priceNote": "1 pza $95 · 12 pzas $75 c/u · 30 pzas $65 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Rojo", "Azul", "Verde", "Amarillo", "Negro", "Rosa"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Gorra sublimable": {"basePrice": 70, "priceNote": "Unitario $70 · Mayoreo $55", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Blanco", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Violeta", "Celeste", "Naranja"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Jarra viajera": {"basePrice": 240, "priceNote": "1 pza $240 · 12 pzas $225 c/u · 30 pzas $210 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Gris", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Tarro cervecero": {"basePrice": 185, "priceNote": "1 pza $185 · 12 pzas $170 c/u · 30 pzas $155 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Tipo", "type": "select", "options": ["Cristal glaseado", "Transparente"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Cilindro aluminio": {"basePrice": 160, "priceNote": "1 pza $160 · 12 pzas $145 c/u · 30 pzas $130 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Gris", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Cilindro Lake": {"basePrice": 115, "priceNote": "1 pza $115 · 12 pzas $100 c/u · 30 pzas $85 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Morado", "Celeste", "Naranja", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Vaso chupón": {"basePrice": 70, "priceNote": "1 pza $70 · 12 pzas $55 c/u · 30 pzas $45 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Morado", "Celeste", "Naranja", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Vaso cafetalero": {"basePrice": 90, "priceNote": "1 pza $90 · 12 pzas $75 c/u · 30 pzas $60 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Morado"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}}
+const PRODUCTS = {"Playera básica": {"basePrice": 220, "priceNote": "1 lado desde $220 · 2 lados desde $260 · Mayoreo desde 12 pzas", "fields": [{"label": "Lados de impresión", "type": "select", "options": ["1 lado", "2 lados"]}, {"label": "Cantidad", "type": "number", "options": []}, {"label": "Color de playera", "type": "select", "options": ["Negro", "Blanco", "Azul", "Celeste", "Gris", "Verde limón", "Verde bandera", "Amarillo", "Rojo", "Naranja", "Rosa", "Rosa pastel", "Café", "Vino"]}, {"label": "Talla", "type": "select", "options": ["CH", "M", "G", "XG"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Polo premium": {"basePrice": 255, "priceNote": "1 lado desde $255 · 2 lados desde $290", "fields": [{"label": "Lados de impresión", "type": "select", "options": ["1 lado", "2 lados"]}, {"label": "Cantidad", "type": "number", "options": []}, {"label": "Color de playera", "type": "select", "options": ["Negro", "Blanco", "Azul", "Celeste", "Gris", "Verde limón", "Verde bandera", "Amarillo", "Rojo", "Naranja", "Rosa", "Rosa pastel", "Café", "Vino"]}, {"label": "Talla", "type": "select", "options": ["CH", "M", "G", "XG"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Playera infantil": {"basePrice": 215, "priceNote": "1 lado desde $215 · 2 lados desde $255 · Mayoreo desde 12 pzas", "fields": [{"label": "Lados de impresión", "type": "select", "options": ["1 lado", "2 lados"]}, {"label": "Cantidad", "type": "number", "options": []}, {"label": "Color de playera", "type": "select", "options": ["Negro", "Blanco", "Azul", "Celeste", "Gris", "Verde limón", "Verde bandera", "Amarillo", "Rojo", "Naranja", "Rosa", "Rosa pastel", "Café", "Vino"]}, {"label": "Talla", "type": "select", "options": ["CH", "M", "G"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza blanca": {"basePrice": 90, "priceNote": "1 pza $90 · 12 pzas $75 c/u · 30 pzas $65 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza espejo": {"basePrice": 190, "priceNote": "1 pza $190 · 12 pzas $155 c/u · 30 pzas $140 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Rosa", "Oro", "Plata"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza glaseada": {"basePrice": 95, "priceNote": "1 pza $95 · 12 pzas $80 c/u · 30 pzas $70 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Azul", "Esmeralda", "Rosa", "Negro"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza mágica": {"basePrice": 130, "priceNote": "1 pza $130 · 12 pzas $100 c/u · 30 pzas $90 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro matte", "Negro brillante"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Taza doble color": {"basePrice": 95, "priceNote": "1 pza $95 · 12 pzas $75 c/u · 30 pzas $65 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Rojo", "Azul", "Verde", "Amarillo", "Negro", "Rosa"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Gorra sublimable": {"basePrice": 70, "priceNote": "Unitario $70 · Mayoreo 12+ pzas $55 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Blanco", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Violeta", "Celeste", "Naranja"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Jarra viajera": {"basePrice": 240, "priceNote": "1 pza $240 · 12 pzas $225 c/u · 30 pzas $210 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Gris", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Tarro cervecero": {"basePrice": 185, "priceNote": "1 pza $185 · 12 pzas $170 c/u · 30 pzas $155 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Tipo", "type": "select", "options": ["Cristal glaseado", "Transparente"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Cilindro aluminio": {"basePrice": 160, "priceNote": "1 pza $160 · 12 pzas $145 c/u · 30 pzas $130 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Gris", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Cilindro Lake": {"basePrice": 115, "priceNote": "1 pza $115 · 12 pzas $100 c/u · 30 pzas $85 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Morado", "Celeste", "Naranja", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Vaso chupón": {"basePrice": 70, "priceNote": "1 pza $70 · 12 pzas $55 c/u · 30 pzas $45 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Morado", "Celeste", "Naranja", "Blanco"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}, "Vaso cafetalero": {"basePrice": 90, "priceNote": "1 pza $90 · 12 pzas $75 c/u · 30 pzas $60 c/u", "fields": [{"label": "Cantidad", "type": "number", "options": []}, {"label": "Color", "type": "select", "options": ["Negro", "Rojo", "Azul", "Verde", "Amarillo", "Rosa", "Morado"]}, {"label": "Notas del diseño", "type": "textarea", "options": []}]}}
 
-// ── PRICE TIERS per product ──
-// Format: [{min:1, max:11, price1side, price2side}, ...]
-// price2side = null means no sides option
+// ── PRICE TIERS ──
 const PRICE_TIERS = {
   'Playera básica':   [{min:1,  max:11, p1:220, p2:260}, {min:12, max:29, p1:205, p2:245}, {min:30, max:9999, p1:190, p2:230}],
   'Polo premium':     [{min:1,  max:11, p1:255, p2:290}, {min:12, max:9999, p1:240, p2:275}],
@@ -1163,7 +1162,7 @@ const PRICE_TIERS = {
   'Taza glaseada':    [{min:1,  max:11, p1:95},  {min:12, max:29, p1:80},  {min:30, max:9999, p1:70}],
   'Taza mágica':      [{min:1,  max:11, p1:130}, {min:12, max:29, p1:100}, {min:30, max:9999, p1:90}],
   'Taza doble color': [{min:1,  max:11, p1:95},  {min:12, max:29, p1:75},  {min:30, max:9999, p1:65}],
-  'Gorra sublimable': [{min:1,  max:11, p1:70},  {min:12, max:9999, p1:55}],
+  'Gorra sublimable': [{min:1, max:11, p1:70}, {min:12, max:29, p1:55}, {min:30, max:9999, p1:55}],
   'Jarra viajera':    [{min:1,  max:11, p1:240}, {min:12, max:29, p1:225}, {min:30, max:9999, p1:210}],
   'Tarro cervecero':  [{min:1,  max:11, p1:185}, {min:12, max:29, p1:170}, {min:30, max:9999, p1:155}],
   'Cilindro aluminio':[{min:1,  max:11, p1:160}, {min:12, max:29, p1:145}, {min:30, max:9999, p1:130}],
@@ -1182,6 +1181,7 @@ function getPrice(productName, qty, sides) {
 
 let cart = [];
 let currentProduct = null;
+let variants = []; // multiple variants per product
 
 function toggleCart() {
   document.getElementById('cartOverlay').classList.toggle('open');
@@ -1190,83 +1190,251 @@ function toggleCart() {
 
 function openCfgModal(productName) {
   currentProduct = productName;
-  const prod = PRODUCTS[productName];
-  document.getElementById('cfgModalTitle').textContent = productName;
-  const fields = prod.fields;
-  let html = '';
-  fields.forEach((f, i) => {
-    html += `<div class="cfg-field"><label>${f.label}</label>`;
-    if (f.type === 'select') {
-      html += `<select id="cfg_${i}" onchange="updatePricePreview()"><option value="">— Selecciona —</option>`;
-      f.options.forEach(o => html += `<option value="${o}">${o}</option>`);
-      html += `</select>`;
-      if (f.label === 'Color' || f.label === 'Color de playera') {
-        html += `<p style="font-size:10px;color:var(--ink3);margin-top:4px;font-style:italic;">* Colores sujetos a disponibilidad</p>`;
-      }
-    } else if (f.type === 'number') {
-      html += `<input type="number" id="cfg_${i}" min="1" value="1" placeholder="Cantidad"
-        oninput="updatePricePreview()"
-        style="width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;font-family:'Poppins',sans-serif;font-size:13px;color:var(--ink);">`;
-      html += `<div id="tierLabel" style="margin-top:7px;padding:8px 12px;border-radius:9px;background:#FFF8E0;border:1.5px solid #E8C800;font-size:11px;font-weight:700;color:var(--ink);display:flex;justify-content:space-between;align-items:center;">
-        <span id="tierLabelText">Precio menudeo</span>
-        <span id="tierLabelPrice" style="color:var(--mag);font-size:13px;"></span>
-      </div>`;
-    } else if (f.type === 'textarea') {
-      html += `<textarea id="cfg_${i}" placeholder="Describe tu diseño, colores, texto, imagen..."></textarea>`;
-    } else {
-      html += `<input type="text" id="cfg_${i}" placeholder="${f.label}">`;
-    }
-    html += `</div>`;
-  });
-  // Price preview box
-  html += `<div id="pricePreview" style="background:var(--bg);border-radius:12px;padding:12px 14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;">
-    <span style="font-size:12px;color:var(--ink2);font-weight:600;">Total estimado</span>
-    <span id="pricePreviewVal" style="font-size:20px;font-weight:800;color:var(--ink);">$0</span>
-  </div>`;
-  document.getElementById('cfgModalFields').innerHTML = html;
+  variants = [{}]; // start with one empty variant
+  renderModal();
   document.getElementById('cfgModalOverlay').classList.add('open');
-  updatePricePreview();
 }
 
-function updatePricePreview() {
-  if (!currentProduct) return;
+function renderModal() {
   const prod = PRODUCTS[currentProduct];
-  const fields = prod.fields;
-  let qty = 1, sides = '1 lado';
-  fields.forEach((f, i) => {
-    const el = document.getElementById('cfg_' + i);
-    if (!el) return;
-    if (f.type === 'number') qty = parseInt(el.value) || 1;
-    if (f.label === 'Lados de impresión') sides = el.value || '1 lado';
-  });
-  const unitPrice = getPrice(currentProduct, qty, sides);
-  const total = unitPrice * qty;
+  document.getElementById('cfgModalTitle').textContent = currentProduct;
 
-  // Update total preview
+  const hasColor = prod.fields.some(f => f.label === 'Color' || f.label === 'Color de playera');
+  const hasSides = prod.fields.some(f => f.label === 'Lados de impresión');
+  const sidesField = prod.fields.find(f => f.label === 'Lados de impresión');
+  const noVariants = prod.noVariants;
+
+  let html = '';
+
+  // Global sides field
+  if (hasSides) {
+    html += `<div class="cfg-field">
+      <label>Lados de impresión</label>
+      <select id="global_sides" onchange="updateAllPreviews()">
+        <option value="">— Selecciona —</option>
+        ${sidesField.options.map(o => `<option value="${o}">${o}</option>`).join('')}
+      </select>
+    </div>`;
+  }
+
+  if (noVariants) {
+    // Simple mode: just qty and notas, no variant rows
+    html += `<div class="cfg-field">
+      <label>Cantidad</label>
+      <input type="number" id="simple_qty" min="1" value="1" oninput="updateSimplePreview()"
+        style="width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;font-family:'Poppins',sans-serif;font-size:13px;color:var(--ink);">
+      <div id="simple_tier" style="margin-top:7px;padding:8px 12px;border-radius:9px;background:#FFF8E0;border:1.5px solid #E8C800;font-size:11px;font-weight:700;color:var(--ink);display:flex;justify-content:space-between;">
+        <span id="simple_tier_label">Precio menudeo</span>
+        <span id="simple_tier_price"></span>
+      </div>
+      ${prod.priceNote ? `<p style="font-size:10px;color:var(--ink3);margin-top:4px;font-style:italic;">${prod.priceNote}</p>` : ''}
+    </div>`;
+  } else {
+    // Variant rows
+    html += `<div style="margin-bottom:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink3);margin-bottom:10px;">Variantes del pedido</div>
+      <div id="variantsContainer"></div>
+      <button onclick="addVariant()" style="width:100%;background:var(--bg);border:1.5px dashed var(--border);border-radius:10px;padding:10px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--ink2);cursor:pointer;margin-top:8px;">
+        + Agregar otra variante
+      </button>
+    </div>`;
+  }
+
+  // Notas
+  html += `<div class="cfg-field">
+    <label>Notas del diseño${noVariants ? '' : ' (aplica a todo el pedido)'}</label>
+    <textarea id="global_notas" placeholder="Describe tu diseño, colores, texto, imagen..."></textarea>
+  </div>`;
+
+  // Price preview
+  if (noVariants) {
+    html += `<div id="pricePreview" style="background:var(--bg);border-radius:12px;padding:12px 14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-size:12px;color:var(--ink2);font-weight:600;">Total estimado</span>
+      <span id="pricePreviewVal" style="font-size:20px;font-weight:800;color:var(--ink);">$0</span>
+    </div>`;
+  } else {
+    html += `<div style="display:flex;gap:8px;margin-bottom:12px;">
+      <div style="flex:1;background:var(--bg);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <span style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink3);margin-bottom:2px;">Total piezas</span>
+        <span id="totalPiecesVal" style="font-size:22px;font-weight:900;color:var(--ink);">0</span>
+      </div>
+      <div style="flex:2;background:var(--bg);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;">
+        <span style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink3);margin-bottom:2px;">Total estimado</span>
+        <span id="pricePreviewVal" style="font-size:22px;font-weight:900;color:var(--ink);">$0</span>
+      </div>
+    </div>`;
+  }
+
+  document.getElementById('cfgModalFields').innerHTML = html;
+
+  if (noVariants) {
+    updateSimplePreview();
+  } else {
+    renderVariants();
+  }
+}
+
+function updateSimplePreview() {
+  if (!currentProduct) return;
+  const qty = parseInt(document.getElementById('simple_qty')?.value) || 1;
+  const unitPrice = getPrice(currentProduct, qty, '1 lado');
+  const total = unitPrice * qty;
   const previewEl = document.getElementById('pricePreviewVal');
   if (previewEl) previewEl.textContent = '$' + total.toLocaleString() + ' MXN';
+  const labelEl = document.getElementById('simple_tier_label');
+  const priceEl = document.getElementById('simple_tier_price');
+  const tierEl = document.getElementById('simple_tier');
+  if (labelEl && priceEl && tierEl) {
+    let label = qty >= 30 ? 'Mayoreo 30+' : qty >= 12 ? 'Mayoreo 12+' : 'Menudeo';
+    let color = qty >= 12 ? '#E8197A' : '#5A5850';
+    labelEl.textContent = label;
+    labelEl.style.color = color;
+    priceEl.textContent = '$' + unitPrice + ' c/u';
+    priceEl.style.color = color;
+    tierEl.style.borderColor = qty >= 12 ? '#E8197A' : '#E8C800';
+    tierEl.style.background = qty >= 12 ? 'rgba(232,25,122,0.07)' : '#FFF8E0';
+  }
+}
 
-  // Update tier label
-  const tiers = PRICE_TIERS[currentProduct];
-  const labelText = document.getElementById('tierLabelText');
-  const labelPrice = document.getElementById('tierLabelPrice');
-  if (labelText && labelPrice && tiers) {
-    let label, color;
-    if (qty >= 30) {
-      label = 'Precio mayoreo 30+';
-      color = '#E8197A';
-    } else if (qty >= 12) {
-      label = 'Precio mayoreo 12+';
-      color = '#E8197A';
-    } else {
-      label = 'Precio menudeo';
-      color = '#5A5850';
+function renderVariants() {
+  const prod = PRODUCTS[currentProduct];
+  const hasColor = prod.fields.some(f => f.label === 'Color' || f.label === 'Color de playera');
+  const hasTalla = prod.fields.some(f => f.label === 'Talla');
+  const colorField = prod.fields.find(f => f.label === 'Color' || f.label === 'Color de playera');
+  const tallaField = prod.fields.find(f => f.label === 'Talla');
+  const tipoField = prod.fields.find(f => f.label === 'Tipo');
+  const noVariants = prod.noVariants;
+
+  // Calculate total qty across ALL variants for tier pricing
+  const totalQty = variants.reduce((sum, v, i) => {
+    const el = document.getElementById(`var_qty_${i}`);
+    return sum + (parseInt(el?.value) || parseInt(v.qty) || 1);
+  }, 0);
+
+  let cols = [];
+  if (hasColor || tipoField) cols.push('1fr');
+  if (hasTalla) cols.push('1fr');
+  cols.push('80px');
+  const gridCols = cols.join(' ');
+
+  let html = '';
+  variants.forEach((v, i) => {
+    html += `<div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:12px;margin-bottom:8px;position:relative;">`;
+    if (variants.length > 1) {
+      html += `<button onclick="removeVariant(${i})" style="position:absolute;top:8px;right:8px;background:none;border:none;color:var(--ink3);font-size:16px;cursor:pointer;padding:0;line-height:1;">✕</button>`;
     }
-    labelText.textContent = label;
-    labelPrice.textContent = '$' + unitPrice + ' c/u';
-    labelPrice.style.color = color;
-    labelText.parentElement.style.borderColor = qty >= 12 ? '#E8197A' : '#E8C800';
-    labelText.parentElement.style.background = qty >= 12 ? 'rgba(232,25,122,0.07)' : '#FFF8E0';
+
+    // Column headers
+    html += `<div style="display:grid;grid-template-columns:${gridCols};gap:8px;margin-bottom:6px;">`;
+    if (hasColor) html += `<div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink3);">Color</div>`;
+    else if (tipoField) html += `<div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink3);">Tipo</div>`;
+    if (hasTalla) html += `<div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink3);">Talla</div>`;
+    html += `<div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink3);">Cant.</div>`;
+    html += `</div>`;
+
+    // Inputs row
+    html += `<div style="display:grid;grid-template-columns:${gridCols};gap:8px;align-items:center;">`;
+
+    if (hasColor) {
+      html += `<div>
+        <select id="var_color_${i}" onchange="updateAllPreviews()" style="width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:8px;font-family:'Poppins',sans-serif;font-size:12px;color:var(--ink);">
+          <option value="">— Color —</option>
+          ${colorField.options.map(o => `<option value="${o}" ${v.color===o?'selected':''}>${o}</option>`).join('')}
+        </select>
+        <p style="font-size:9px;color:var(--ink3);margin-top:3px;font-style:italic;">* Sujeto a disponibilidad</p>
+      </div>`;
+    } else if (tipoField) {
+      html += `<div>
+        <select id="var_color_${i}" onchange="updateAllPreviews()" style="width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:8px;font-family:'Poppins',sans-serif;font-size:12px;color:var(--ink);">
+          <option value="">— Tipo —</option>
+          ${tipoField.options.map(o => `<option value="${o}" ${v.color===o?'selected':''}>${o}</option>`).join('')}
+        </select>
+      </div>`;
+    }
+
+    if (hasTalla) {
+      html += `<div>
+        <select id="var_talla_${i}" onchange="updateAllPreviews()" style="width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:8px;font-family:'Poppins',sans-serif;font-size:12px;color:var(--ink);">
+          <option value="">— Talla —</option>
+          ${tallaField.options.map(o => `<option value="${o}" ${v.talla===o?'selected':''}>${o}</option>`).join('')}
+        </select>
+      </div>`;
+    }
+
+    html += `<div>
+      <input type="number" id="var_qty_${i}" min="1" value="${v.qty||1}"
+        oninput="updateAllPreviews()"
+        style="width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:8px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--ink);text-align:center;">
+    </div>`;
+
+    html += `</div>`; // inputs grid
+    html += `<div id="var_price_${i}" style="margin-top:8px;font-size:11px;color:var(--ink2);text-align:right;"></div>`;
+    html += `</div>`; // card
+  });
+
+  document.getElementById('variantsContainer').innerHTML = html;
+  updateAllPreviews();
+}
+
+function addVariant() {
+  // Save current values before re-rendering
+  saveVariantValues();
+  variants.push({});
+  renderVariants();
+}
+
+function saveVariantValues() {
+  variants.forEach((v, i) => {
+    const colorEl = document.getElementById(`var_color_${i}`);
+    const tallaEl = document.getElementById(`var_talla_${i}`);
+    const qtyEl = document.getElementById(`var_qty_${i}`);
+    if (colorEl) v.color = colorEl.value;
+    if (tallaEl) v.talla = tallaEl.value;
+    if (qtyEl) v.qty = parseInt(qtyEl.value) || 1;
+  });
+}
+
+function removeVariant(i) {
+  saveVariantValues();
+  variants.splice(i, 1);
+  renderVariants();
+}
+
+function updateAllPreviews() {
+  if (!currentProduct) return;
+  const sides = document.getElementById('global_sides')?.value || '1 lado';
+
+  // Calculate TOTAL quantity across all variants first
+  let totalQty = 0;
+  variants.forEach((v, i) => {
+    const qty = parseInt(document.getElementById(`var_qty_${i}`)?.value) || 1;
+    totalQty += qty;
+  });
+
+  let grandTotal = 0;
+  variants.forEach((v, i) => {
+    const qty = parseInt(document.getElementById(`var_qty_${i}`)?.value) || 1;
+    // Use totalQty for tier calculation
+    const unitPrice = getPrice(currentProduct, totalQty, sides);
+    const itemTotal = unitPrice * qty;
+    grandTotal += itemTotal;
+
+    const badge = document.getElementById(`var_price_${i}`);
+    if (badge) {
+      let tierLabel = totalQty >= 30 ? 'Mayoreo 30+' : totalQty >= 12 ? 'Mayoreo 12+' : 'Menudeo';
+      let tierColor = totalQty >= 12 ? '#E8197A' : 'var(--ink2)';
+      badge.innerHTML = `<span style="color:${tierColor};font-weight:700;">${tierLabel} · $${unitPrice} c/u</span> · Subtotal: <strong>$${itemTotal.toLocaleString()}</strong>`;
+    }
+  });
+
+  const previewEl = document.getElementById('pricePreviewVal');
+  if (previewEl) previewEl.textContent = '$' + grandTotal.toLocaleString() + ' MXN';
+
+  const piecesEl = document.getElementById('totalPiecesVal');
+  if (piecesEl) {
+    let tierColor = totalQty >= 30 ? '#E8197A' : totalQty >= 12 ? '#E8197A' : 'var(--ink)';
+    piecesEl.textContent = totalQty;
+    piecesEl.style.color = tierColor;
   }
 }
 
@@ -1276,43 +1444,67 @@ document.getElementById('cfgModalOverlay').addEventListener('click', function(e)
 
 function confirmAddToCart() {
   const prod = PRODUCTS[currentProduct];
-  const fields = prod.fields;
-  let config = {};
-  let valid = true;
-  let qty = 1;
-  let sides = '1 lado';
+  const sides = document.getElementById('global_sides')?.value || '';
+  const hasSides = prod.fields.some(f => f.label === 'Lados de impresión');
+  const notas = document.getElementById('global_notas')?.value.trim() || '';
+  const noVariants = prod.noVariants;
 
-  fields.forEach((f, i) => {
-    const el = document.getElementById('cfg_' + i);
-    const val = el ? el.value.trim() : '';
-    if (f.type === 'select' && !val) { valid = false; return; }
-    if (f.type === 'number') {
-      qty = parseInt(val) || 1;
-      config[f.label] = qty + ' pieza' + (qty !== 1 ? 's' : '');
-    } else {
-      config[f.label] = val || '—';
-      if (f.label === 'Lados de impresión') sides = val;
-    }
-  });
+  if (hasSides && !sides) { alert('Por favor selecciona los lados de impresión.'); return; }
 
-  if (!valid) { alert('Por favor selecciona todas las opciones.'); return; }
-  if (qty < 1) { alert('La cantidad debe ser al menos 1.'); return; }
+  if (noVariants) {
+    const qty = parseInt(document.getElementById('simple_qty')?.value) || 1;
+    const unitPrice = getPrice(currentProduct, qty, sides);
+    const grandTotal = unitPrice * qty;
+    cart.push({
+      id: Date.now(),
+      name: currentProduct,
+      sides,
+      notas,
+      variants: [{ qty, color: '', talla: '', unitPrice }],
+      totalQty: qty,
+      grandTotal
+    });
+  } else {
+    saveVariantValues();
+    let totalQty = 0;
+    variants.forEach((v, i) => {
+      totalQty += parseInt(document.getElementById(`var_qty_${i}`)?.value) || 1;
+    });
 
-  const unitPrice = getPrice(currentProduct, qty, sides);
-  const displayQty = qty + ' pieza' + (qty !== 1 ? 's' : '');
+    let variantList = [];
+    let valid = true;
+    let grandTotal = 0;
 
-  cart.push({
-    id: Date.now(),
-    name: currentProduct,
-    config,
-    unitPrice,
-    qty,
-    displayQty
-  });
+    variants.forEach((v, i) => {
+      const qty = parseInt(document.getElementById(`var_qty_${i}`)?.value) || 1;
+      const color = document.getElementById(`var_color_${i}`)?.value || '';
+      const talla = document.getElementById(`var_talla_${i}`)?.value || '';
+      const hasColor = prod.fields.some(f => f.label === 'Color' || f.label === 'Color de playera' || f.label === 'Tipo');
+      const hasTalla = prod.fields.some(f => f.label === 'Talla');
+
+      if (hasColor && !color) { valid = false; return; }
+      if (hasTalla && !talla) { valid = false; return; }
+
+      const unitPrice = getPrice(currentProduct, totalQty, sides);
+      grandTotal += unitPrice * qty;
+      variantList.push({ qty, color, talla, unitPrice });
+    });
+
+    if (!valid) { alert('Por favor completa todas las variantes.'); return; }
+
+    cart.push({
+      id: Date.now(),
+      name: currentProduct,
+      sides,
+      notas,
+      variants: variantList,
+      totalQty,
+      grandTotal
+    });
+  }
 
   document.getElementById('cfgModalOverlay').classList.remove('open');
   renderCart();
-  // Open cart drawer
   document.getElementById('cartOverlay').classList.add('open');
   document.getElementById('cartDrawer').classList.add('open');
 }
@@ -1325,37 +1517,39 @@ function renderCart() {
   const totalEl = document.getElementById('cartTotal');
 
   if (cart.length === 0) {
-    empty.style.display = 'block';
+    container.innerHTML = '<div class="cart-empty" id="cartEmpty">Tu carrito está vacío</div>';
     footer.style.display = 'none';
     countEl.textContent = '0';
     return;
   }
 
-  empty.style.display = 'none';
   footer.style.display = 'block';
-
   let total = 0;
   let html = '';
-  cart.forEach(item => {
-    const itemTotal = item.unitPrice * item.qty;
-    total += itemTotal;
-    let configHtml = Object.entries(item.config)
-      .filter(([k,v]) => v && v !== '—' && k !== 'Cantidad')
-      .map(([k,v]) => `<span style="color:var(--ink3);font-size:11px;"><b>${k}:</b> ${v}</span>`)
-      .join(' · ');
 
-    html += `
-      <div class="cart-item" data-id="${item.id}">
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-sub">${item.displayQty} · ${item.unitPrice}/pza · ${configHtml}</div>
-        <div class="cart-item-controls">
-          <span class="cart-item-price">$${itemTotal.toLocaleString()}</span>
-          <button class="cart-remove" onclick="removeItem(${item.id})">✕</button>
-        </div>
-      </div>`;
+  cart.forEach(item => {
+    total += item.grandTotal;
+    let varHtml = item.variants.map(v => {
+      let parts = [];
+      if (v.qty) parts.push(`${v.qty} pza${v.qty>1?'s':''}`);
+      if (v.color) parts.push(v.color);
+      if (v.talla) parts.push(`Talla ${v.talla}`);
+      parts.push(`$${v.unitPrice} c/u`);
+      return `<div style="font-size:11px;color:var(--ink2);padding:2px 0;">• ${parts.join(' · ')}: <strong>$${(v.unitPrice*v.qty).toLocaleString()}</strong></div>`;
+    }).join('');
+
+    html += `<div class="cart-item" data-id="${item.id}">
+      <div class="cart-item-name">${item.name}${item.sides ? ' · '+item.sides : ''}</div>
+      <div style="margin:6px 0;">${varHtml}</div>
+      ${item.notas ? `<div style="font-size:11px;color:var(--ink3);font-style:italic;margin-top:4px;">Notas: ${item.notas}</div>` : ''}
+      <div class="cart-item-controls" style="margin-top:8px;">
+        <span class="cart-item-price">$${item.grandTotal.toLocaleString()}</span>
+        <button class="cart-remove" onclick="removeItem(${item.id})">✕</button>
+      </div>
+    </div>`;
   });
 
-  container.innerHTML = html + '<div id="cartEmpty" style="display:none;"></div>';
+  container.innerHTML = html;
   countEl.textContent = cart.length;
   totalEl.textContent = '$' + total.toLocaleString();
 }
@@ -1363,10 +1557,9 @@ function renderCart() {
 function removeItem(id) {
   cart = cart.filter(i => i.id !== id);
   if (cart.length === 0) {
-    document.getElementById('cartEmpty').style.display = 'block';
+    document.getElementById('cartItems').innerHTML = '<div class="cart-empty" id="cartEmpty">Tu carrito está vacío</div>';
     document.getElementById('cartFooter').style.display = 'none';
     document.getElementById('cartCount').textContent = '0';
-    document.getElementById('cartItems').innerHTML = '<div class="cart-empty" id="cartEmpty">Tu carrito está vacío 🛒</div>';
   } else {
     renderCart();
   }
@@ -1377,18 +1570,19 @@ function sendToWhatsApp() {
   let msg = '*Pedido desde el catalogo El Taller*\n\n';
   let total = 0;
   cart.forEach((item, i) => {
-    const itemTotal = item.unitPrice * item.qty;
-    total += itemTotal;
-    msg += `*${i+1}. ${item.name}*\n`;
-    msg += `   Cantidad: ${item.displayQty} - $${item.unitPrice} c/u\n`;
-    Object.entries(item.config).forEach(([k,v]) => {
-      if (v && v !== '-' && k !== 'Cantidad') msg += `   ${k}: ${v}\n`;
+    total += item.grandTotal;
+    msg += `*${i+1}. ${item.name}*${item.sides ? ' - '+item.sides : ''}\n`;
+    item.variants.forEach(v => {
+      let parts = [];
+      if (v.color) parts.push(v.color);
+      if (v.talla) parts.push(`Talla ${v.talla}`);
+      msg += `   - ${v.qty} pza${v.qty>1?'s':''} ${parts.length?'('+parts.join(', ')+')':''} - $${v.unitPrice} c/u = $${(v.unitPrice*v.qty).toLocaleString()}\n`;
     });
-    msg += `   Subtotal: $${itemTotal.toLocaleString()}\n\n`;
+    if (item.notas) msg += `   Notas: ${item.notas}\n`;
+    msg += `   Subtotal: $${item.grandTotal.toLocaleString()}\n\n`;
   });
   msg += `*Total: $${total.toLocaleString()} MXN*\n`;
-  msg += `*Anticipo (50%): $${Math.ceil(total * 0.5).toLocaleString()} MXN*\n`;
-
+  msg += `*Anticipo (50%): $${Math.ceil(total*0.5).toLocaleString()} MXN*`;
   const url = 'https://wa.me/529624545184?text=' + encodeURIComponent(msg);
   window.open(url, '_blank');
 }
